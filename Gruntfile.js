@@ -10,7 +10,10 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '<%= relativeRoot.docpad.options.root %>',
-                        src: ['**/*.css', '**/*.html'],
+                        src: [
+                            //'** /*.css',
+                            '**/*.html'
+                        ],
                         dest: 'out/'
                     }
                 ]

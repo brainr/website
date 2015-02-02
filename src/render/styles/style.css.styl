@@ -1,7 +1,11 @@
-green = #566f44
-darkgreen = darken(green, 15%)
-background = #e8e8e8
-box-color = #fff
+blue = #0099ce
+yellow = #ffe811
+red = #ff3366
+green = #3bd42e
+white = #fff
+black = #222
+
+background = white
 
 body, html
 	background-color background
@@ -11,182 +15,8 @@ body, html
 h1, h2, h3, h4, h5, h6
 	font-family 'Open Sans', sans-serif
 
-a, a:link
-	cursor pointer
+.menu
+	color black
 
-.banner-box
-	display block
-	position absolute
-	width 360px
-	text-align center
-	padding-top 7px
-	background green
-	background rgba(green, .7)
-	color #fff
-
-.banner-title
-	position absolute
-	bottom 20px
-	right 60px
-	text-align right
-	h2
-		font-family 'Great Vibes', sans-serif
-		font-size 6em
-		margin-bottom -8px
-		color green
-		text-shadow 0 0 8px rgba(#fff, .4)
-	p
-		font-size 2em
-
-.banner-img
-	display block
-	width 100%
-	height 300px
-	background-image url('http://placehold.it/1140x300.png/09f/adf')
-	background-repeat no-repeat
-	background-position 50% 50%
-	background-size cover
-
-@media (max-width: 768px)
-	.banner-box
-		width 95%
-		width calc(100% - 30px)
-
-	.banner-title
-		h2
-			font-size 4em
-		p
-			font-size 1.5em
-
-.box
-	background-color box-color
-	padding 10px
-	margin-bottom 20px
-	border-radius 4px
-	h1, h2
-		color green
-		&:first-child
-			margin-top 2px
-	&.extra
-		background-color #566f44
-		h2
-			color box-color
-		img
-			width 100%
-			margin 10px 0
-
-table
-	tfoot, tbody
-		th
-			border-top 1px solid #DDD
-
-footer
-	padding-bottom 30px
-	background-color green
-	color #fff !important
-
-
-
-// Custom navbar
-
-.navbar-custom
-	background-color green
-	border-radius 0
-
-	.navbar-brand
-		color #ffffff
-
-		&:hover,
-		&:focus
-			color #e6e6e6
-			background-color transparent
-
-	.navbar-text
-		color #ffffff
-
-	.navbar-toggle
-		border-color box-color
-
-		&:hover
-		&:focus
-			background-color darkgreen
-
-		.icon-bar
-			background-color box-color
-
-	.navbar-collapse
-		overflow hidden
-
-	.navbar-collapse,
-	.navbar-form
-		border-color darkgreen
-
-	.navbar-link
-		color #ffffff
-		&:hover
-			color #c0c0c0
-
-	.navbar-nav
-		& > li > a
-			color #ffffff
-			&:hover
-			&:focus
-				color #c0c0c0
-				background-color transparent
-
-		& > .active > a
-		& > .active > a:hover
-		& > .active > a:focus
-			color #c0c0c0
-			background-color darkgreen
-
-		& > .disabled > a
-		& > .disabled > a:hover
-		& > .disabled > a:focus
-			color #cccccc
-			background-color transparent
-
-
-		& > .dropdown > a
-			&:hover .caret
-			&:focus .caret
-				border-top-color #c0c0c0
-				border-bottom-color #c0c0c0
-			.caret
-				border-top-color #ffffff
-				border-bottom-color #ffffff
-
-		& > .open > a,
-		& > .open > a:hover,
-		& > .open > a:focus
-			background-color darkgreen
-			color #c0c0c0
-
-		& > .open > a .caret,
-		& > .open > a:hover .caret,
-		& > .open > a:focus .caret
-			border-top-color #c0c0c0
-			border-bottom-color #c0c0c0
-
-@media (max-width: 767)
-	.navbar-custom .navbar-nav .open .dropdown-menu
-		li > a
-			color #ffffff
-			&:hover
-			&:focus
-				color #c0c0c0
-				background-color transparent
-
-		.active
-			& > a
-			& > a:hover
-			& > a:focus
-				color #c0c0c0
-				background-color darkgreen
-
-		.disabled
-			& > a
-			& > a:hover
-			& > a:focus
-				color #cccccc
-				background-color transparent
+.logo
+	margin-top 60px

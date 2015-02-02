@@ -10,7 +10,7 @@
 //- User
 - styles.add(["/styles/base.css"])
 - styles.add(["/styles/grid.css"])
-- styles.add(["/styles/helper.css"])
+- styles.add(["/styles/helpers.css"])
 - styles.add(["/styles/style.css"])
 - scripts.add(["/scripts/script.js"])
 
@@ -55,20 +55,10 @@ html(lang="en")
 		!= styles.toHTML()
 
 	body
-		.container
+		.logo.container
 			.row
-				.col-1 1111111111111111111
-				.col-1 1111111111111111111
-				.col-1 1111111111111111111
-				.col-1 1111111111111111111
-			.row
-				.col-2 2222222222222222222
-				.col-2 2222222222222222222
-			.row
-				.col-3 3333333333333333333
-				.col-1 1111111111111111111
-			.row
-				.col-4 4444444444444444444
+				.col-4.text-center
+					img(src="/img/logo.png")
 
 		//.container
 			.row
