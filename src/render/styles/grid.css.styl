@@ -1,0 +1,74 @@
+.container
+	max-width 960px
+	margin-right auto
+	margin-left auto
+	padding-left 15px
+	padding-right 15px
+
+.row
+	margin-left -15px
+	margin-right -15px
+
+.clearfix
+.container
+.container-fluid
+.row
+	&:before
+	&:after
+		content " "
+		display table
+
+.clearfix
+.container
+.container-fluid
+.row
+	&:after
+		clear both
+
+.col-1
+.col-2
+.col-3
+.col-4
+	position relative
+	float left
+	min-height 1px
+	padding-left 15px
+	padding-right 15px
+
+.col-1
+	width 50%
+
+.col-2
+.col-3
+.col-4
+	width 100%
+
+.col-offset-1
+.col-offset-2
+	margin-left 50%
+
+@media (min-width: 520px)
+	.col-1
+		width 25%
+
+	.col-2
+		width 50%
+
+	.col-3
+		width 75%
+
+	.col-4
+		width 100%
+
+	.col-offset-1
+		margin-left 25%
+
+	.col-offset-2
+		margin-left 50%
+
+	.col-offset-3
+		margin-left 75%
+
+@media (min-width: 760px)
+	.container
+		width 80%

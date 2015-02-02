@@ -8,6 +8,9 @@
 - scripts.add(["/vendor/log.js","/vendor/modernizr.js"])
 
 //- User
+- styles.add(["/styles/base.css"])
+- styles.add(["/styles/grid.css"])
+- styles.add(["/styles/helper.css"])
 - styles.add(["/styles/style.css"])
 - scripts.add(["/scripts/script.js"])
 
@@ -54,47 +57,20 @@ html(lang="en")
 	body
 		.container
 			.row
-				.col-xs-12
-					.banner-box
-						img(src="http://placehold.it/320x80.png/abc/afd")
-						p #{site.data.address1} • #{site.data.address2}
-						p Tlf. #{site.data.phone}
-					.banner-title
-						h2=site.title
-						p= site.data.subtitle
-					.banner-img
+				.col-1 1111111111111111111
+				.col-1 1111111111111111111
+				.col-1 1111111111111111111
+				.col-1 1111111111111111111
+			.row
+				.col-2 2222222222222222222
+				.col-2 2222222222222222222
+			.row
+				.col-3 3333333333333333333
+				.col-1 1111111111111111111
+			.row
+				.col-4 4444444444444444444
 
-		// Markup
-		nav.navbar.navbar-custom
-			.container
-				.navbar-header
-					button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar-collapse")
-						span.sr-only Toggle navigation
-						span.icon-bar
-						span.icon-bar
-						span.icon-bar
-					a.navbar-brand(href="/")
-						span.glyphicon.glyphicon-home
-				#navbar-collapse.collapse.navbar-collapse
-					ul.nav.navbar-nav
-						each doc in getCollection('pages').toJSON()
-							- dropdown = !!doc.subCollection
-							- clazz = (document.url === doc.url) ? 'active' : ''
-							- clazz += dropdown ? ' dropdown' : ''
-							if clazz === ''
-								- clazz = null
-							li(class=clazz)
-								if(dropdown)
-									a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
-										| #{doc.title}&nbsp;
-										span.caret
-									ul.dropdown-menu(role="menu")
-										each subDoc in getCollection(doc.subCollection).toJSON()
-											li: a(href=subDoc.url)= subDoc.title
-								else
-									a(href=doc.url)= doc.title
-
-		.container
+		//.container
 			.row
 				.col-xs-12.col-sm-7.col-md-8.col-lg-9
 					section#content.box!= content
@@ -110,7 +86,7 @@ html(lang="en")
 						p Lorem
 							| ipsum
 							a(href="/") link
-		footer
+		//-footer
 			.container
 				.row
 					.col-xs-12.col-sm-6
