@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Karstensminde</title>
+  <link href="http://www.karstensminde.dk/atom.xml" rel="self"/>
+  <link href="http://www.karstensminde.dk"/>
+  <updated>2015-02-02T21:15:05.703Z</updated>
+  <id>http://www.karstensminde.dk</id>
+  <author>
+    <name>Your Name</name>
+    <email>info@karstensminde.dk</email>
+  </author>
+
+  
+</feed>
