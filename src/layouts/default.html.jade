@@ -4,6 +4,7 @@
 - scripts.add(["/vendor/jquery/dist/jquery.min.js"])
 
 - styles.add(["/vendor/normalize.css/normalize.css"])
+- styles.add(["/vendor/fontawesome/css/font-awesome.min.css"])
 
 - scripts.add(["/vendor/log.js","/vendor/modernizr.js"])
 
@@ -50,32 +51,25 @@ html(lang="en")
 		//if lt IE 9
 			script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
-		link(href='http://fonts.googleapis.com/css?family=Great+Vibes|Merriweather:400,700|Open+Sans', rel='stylesheet', type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400', rel='stylesheet', type='text/css')
 		// Styles
 		!= styles.toHTML()
 
 	body
+		.menu
+			ul
+				li: a(href="#") Intro
+				li: a(href="#") Services
+				li: a(href="#") Portfolio
+				li: a(href="#") Prices
+				li: a(href="#") Contact
+
 		.logo.container
 			.row
 				.col-4.text-center
 					img(src="/img/logo.png")
 
-		//.container
-			.row
-				.col-xs-12.col-sm-7.col-md-8.col-lg-9
-					section#content.box!= content
-				.col-xs-12.col-sm-5.col-md-4.col-lg-3
-					.box.extra
-						.row
-							.col-xs-12
-								h2 Tilsyns rapport
-								img(src='/image/kontrolrapport.gif')
-					.box
-						h2 Kom og spis
-						p Lorem ipsum dolor sit amet
-						p Lorem
-							| ipsum
-							a(href="/") link
+		#content!= content
 		//-footer
 			.container
 				.row

@@ -1,12 +1,4 @@
 # The DocPad Configuration File
-# It is simply a CoffeeScript Object which is parsed by CSON
-
-findSubPages = (database, mainPage) ->
-	database.findAllLive({relativeOutDirPath: mainPage, pageOrder:
-		$exists: true
-	}, [
-		pageOrder: 1, title: 1
-	])
 
 docpadConfig =
 
@@ -19,32 +11,26 @@ docpadConfig =
 	# Specify some site properties
 		site:
 		# The production url of our website
-			url: "http://www.karstensminde.dk"
+			url: "http://brainr.co"
 
 		# Here are some old site urls that you would like to redirect from
 			oldUrls: []
 
 		# The default title of our website
-			title: "Karstensminde"
+			title: "Brainr"
 
 		# The website description (for SEO)
-			description: """When your website appears in search results in say Google, the text here will be shown underneath your website's title."""
+			description: ""
 
 		# The website keywords (for SEO) separated by commas
-			keywords: """place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website"""
+			keywords: ""
 
 		# The website author's name
-			author: "Your Name"
+			author: "Daniel Salamon"
 
 		# The website author's email
-			email: "info@karstensminde.dk"
+			email: "salidani@gmail.com"
 
-		# Your company's name
-			data:
-				subtitle: 'Mere end et plejehjem'
-				address1: 'Hans Jensens Vej 1'
-				address2: '6771 Gredstedbro'
-				phone: '75 43 14 64'
 	# Helper Functions
 	# ----------------
 
@@ -76,23 +62,17 @@ docpadConfig =
 	collections:
 	# For instance, this one will fetch in all documents that have pageOrder set within their meta data
 		pages: (database) ->
-			findSubPages(database, 'pages')
+			database.findAllLive({relativeOutDirPath: 'pages', pageOrder:
+				$exists: true
+			}, [
+				pageOrder: 1, title: 1
+			])
 
 	# This one, will fetch in all documents that will be outputted to the posts directory
 		posts: (database) ->
 			database.findAllLive({relativeOutDirPath: 'posts'}, [
 				date: -1
 			])
-
-
-		historie: (database) ->
-			findSubPages(database, 'historie')
-		'praktiske-informationer': (database) ->
-			findSubPages(database, 'praktiske-informationer')
-		aktiviteter: (database) ->
-			findSubPages(database, 'aktiviteter')
-		personale: (database) ->
-			findSubPages(database, 'personale')
 
 	plugins:
 		cleanurls:
