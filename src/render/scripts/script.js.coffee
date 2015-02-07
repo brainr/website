@@ -1,2 +1,11 @@
 $ ->
-  log('test')
+	# smooth scroll
+	menuHeight = 60
+	$('a[href*=#]:not([href=#])').click ->
+		if location.pathname.replace(/^\//, '') == @pathname.replace(/^\//, '') and location.hostname == @hostname
+			target = $(@hash)
+			target = if target.length then target else $('[name=' + @hash.slice(1) + ']')
+			if target.length
+				$('html,body').animate { scrollTop: target.offset().top - menuHeight}, 1000
+				return false
+		return
