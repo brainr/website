@@ -77,6 +77,11 @@ docpadConfig =
 	plugins:
 		cleanurls:
 			static: true
+		sitemap:
+			cachetime: 600000
+			changefreq: 'weekly'
+			priority: 0.5
+			filePath: 'sitemap.xml'
 
 # DocPad Events
 # =============

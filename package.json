@@ -45,7 +45,8 @@
     "grunt": "^0.4.5",
     "grunt-relative-root": "^0.2.2",
     "grunt-gh-pages": "^0.9.1",
-    "grunt-shell": "^1.1.1"
+    "grunt-shell": "^1.1.1",
+    "docpad-plugin-sitemap": "~2.2.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x",
