@@ -58,27 +58,22 @@ html(lang="en")
 	body
 		.menu
 			ul
-				li: a(href="#") Intro
-				li: a(href="#") Services
-				li: a(href="#") Portfolio
-				li: a(href="#") Prices
-				li: a(href="#") Contact
-
-		.logo.container
-			.row
-				.col-4.text-center
-					img(src="/img/logo.png")
+				li: a(href="/#about") Rólunk
+				li: a(href="/#services") Amit nyújtunk
+				li: a(href="/#portfolio") Portfólió
+				li: a(href="/#prices") Áraink
+				li: a(href="/#contact") Kapcsolat
 
 		#content!= content
-		//-footer
+		footer
 			.container
 				.row
-					.col-xs-12.col-sm-6
-						h2 Administration
-						p=site.data.address1
-						p=site.data.address2
-						p Tlf. #{site.data.phone}
-						p: a(href="mailto:#{site.email}") #{site.email}
+					.col-4
+						h2 Elérhetőségeink
+						p site.data.address1
+						p site.data.address2
+						p Tlf. site.data.phone
+						p: a(href="#") # {site.email}
 
 		// Scripts
 		!= scripts.toHTML()

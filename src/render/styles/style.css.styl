@@ -5,12 +5,17 @@ green = #3bd42e
 white = #fff
 black = #222
 
+grey = lighten(black, 66%)
 background = white
 
 body, html
 	background-color background
-	min-width 360px
 	font-family 'Open Sans', serif
+
+body
+html
+.menu
+	min-width 360px
 
 h1, h2, h3, h4, h5, h6
 	font-weight 300
@@ -21,25 +26,91 @@ h1, h2, h3, h4, h5, h6
 	top 0
 	left 0
 	width 100%
+	margin 0 auto
 	z-index 1000
 	ul
+		margin 0
 		list-style none
-		padding 0
-		background-color background
-		box-shadow 0 0 50px 40px background
+		padding 20px 5%
+		background-color rgba(black, .3)
+		transition background-color .3s
+		&:hover
+			background-color rgba(black, .6)
 		li
 			display inline-block
 			a
-				color black
+				position relative
+				color white
 				font-weight 300
 				text-transform uppercase
-			&:not(:last-child) a:after
-				content '\7c'
-				display inline-block
-				width 30px
-				text-align center
-				color lighten(black, 70%)
-				vertical-align text-bottom
+				&:hover
+					text-decoration none
+					&:before
+						content ''
+						position absolute
+						display block
+						width 20px
+						border-bottom 1px solid white
+						bottom -2px
+						left calc(50% - 10px)
+			&:not(:last-child)
+				a:after
+					content '\7c'
+					display inline-block
+					width 30px
+					text-align center
+					color lighten(black, 70%)
+					vertical-align text-bottom
+				a:hover:before
+					left calc(50% - 23px)
+
 
 .logo
+	background background url("../img/top-img.jpg") 50% 50%
+	background-repeat no-repeat
+	background-size cover
+	padding 200px 0 160px
+
+section
 	margin-top 100px
+	margin-bottom 100px
+	h2
+		text-transform uppercase
+		text-align center
+
+.panel
+	border 1px solid grey
+	padding 0 20px
+
+form
+	label
+		display block
+	input[type="text"]
+	input[type="number"]
+	input[type="email"]
+	select
+	textarea
+		padding 4px 10px
+		width 100%
+		border 1px solid grey
+	.btn
+		border-width 1px
+		border-style solid
+		border-color grey
+		padding 4px 10px
+		&.btn-block
+			width 100%
+		&.btn-lg
+			padding 8px 26px
+
+		&.btn-default
+			background-color background
+		&.btn-success
+			background-color green
+			color background
+			border-color darken(green, 20%)
+		&.btn-error
+			background-color red
+			color background
+			border-color darken(red, 20%)
+

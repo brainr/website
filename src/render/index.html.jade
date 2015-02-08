@@ -3,32 +3,71 @@ layout: 'default'
 title: 'Home'
 ---
 
-.container
-	// Main hero unit for a primary marketing message or call to action.
-	.jumbotron
-		h1 Welcome to your new site!
-		p: :markdown
-			We've copied over the [Bootstrap Skeleton](https://github.com/docpad/twitter-bootstrap.docpad) for you already, which is what you're currently viewing.
-			<br>
-			Step through the guide below and we'll walk you through the process of working with your first docpad website :-)
+.logo
+	.container
+		.row
+			.col-4.text-center
+				img(src="/img/logo.png")
 
-	// Example row of columns.
+section#about.container
 	.row
-		.col-1
-			h2 Docpad
-			p DocPad takes that good ol' simple approach of writing files and wraps it with the best modern innovations, providing an awesome intuitive, liberating and empowering solution for HTML5 web development.</p>
-			p: a.btn.btn-default(href="https://github.com/bevry/docpad") Visit Website
-		.col-1
-			h2 Bootstrap
-			p Bootstrap is a toolkit originally from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.</p>
-			p: a.btn.btn-default(href="http://getbootstrap.com/") Visit Website
-	// Example row of columns.
+		.col-4
+			h2 Rólunk
 	.row
 		.col-2
-			h2 Docpad
-			p DocPad takes that good ol' simple approach of writing files and wraps it with the best modern innovations, providing an awesome intuitive, liberating and empowering solution for HTML5 web development.</p>
-			p: a.btn.btn-default(href="https://github.com/bevry/docpad") Visit Website
+			p Lorem ipsum
 		.col-2
-			h2 Bootstrap
-			p Bootstrap is a toolkit originally from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.</p>
-			p: a.btn.btn-default(href="http://getbootstrap.com/") Visit Website
+			p Lorem ipsum
+
+.clearfix
+
+section#services.container
+	.row
+		.col-4
+			h2 Amiben jók vagyunk
+	.row
+		.col-2
+			p Lorem ipsum
+		.col-2
+			p Lorem ipsum
+
+.clearfix
+
+section#portfolio.container
+	.row
+		.col-4
+			h2 Rólunk
+	.row
+		.col-2
+			p Lorem ipsum
+		.col-2
+			p Lorem ipsum
+
+.clearfix
+
+section#prices.container
+	h2 Kérjen árajánlatot!
+	.row
+		.col-4
+			p Megrendelő rendszerünk jelenleg fejlesztés alatt áll. Míg az elkészül, kérjen tőlünk egyedi árajánlatot az alábbi űrlap elküldésével!
+	.row
+		.col-4
+			form#offer-request.panel
+				.row
+					.col-2
+						p
+							label(for="or-name") Név
+							input#or-name(type="text", name="name", placeholder="Kovács János", required)
+						p
+							label(for="or-email") E-mail cím
+							input#or-email(type="email", name="email", placeholder="j.kovacs@vallalat.hu", required)
+					.col-2
+						p
+							label(for="or-comment") Mire kér árajánlatot?
+							textarea#or-comment(name="comment", rows="5")
+				.row
+					.col-4
+						p.text-right
+							button.btn.btn-lg.btn-success(type="submit") Elküldés
+
+.clearfix
