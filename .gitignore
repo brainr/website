@@ -66,6 +66,9 @@ nbproject
 # windows thumbnail cache
 Thumbs.db
 
+# Google Drive icon
+**/desktop.ini
+
 # Mac DS_Store Files
 .DS_Store
 
