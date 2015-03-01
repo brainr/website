@@ -1,3 +1,5 @@
+@import 'nib'
+
 blue = #0099ce
 yellow = #ffe811
 red = #ff3366
@@ -65,11 +67,55 @@ h1, h2, h3, h4, h5, h6
 					left calc(50% - 23px)
 
 
+roll-height = 50px
 .logo
 	background background url("../img/top-img.jpg") 50% 50%
 	background-repeat no-repeat
 	background-size cover
 	padding 200px 0 160px
+	.weare
+		color white
+		.weare-static
+			margin-bottom 0
+			text-transform uppercase
+			font-size 20px
+			font-weight bold
+		.weare-roll-container
+			height roll-height
+			overflow hidden
+			.weare-roll
+				margin-top 0
+				padding-left 0
+				line-height roll-height
+				font-size roll-height - 10
+				font-weight 100
+				list-style none
+				animation roll-animation 16s linear infinite
+
+
+@keyframes roll-animation
+	0%
+		margin-top 0
+	17.5%
+		margin-top 0
+	19.5%
+		margin-top (roll-height * -1)
+	37%
+		margin-top (roll-height * -1)
+	39%
+		margin-top (roll-height * -2)
+	56.5%
+		margin-top (roll-height * -2)
+	58.5%
+		margin-top (roll-height * -3)
+	76%
+		margin-top (roll-height * -3)
+	78%
+		margin-top (roll-height * -4)
+	95.5%
+		margin-top (roll-height * -4)
+	100%
+		margin-top 0
 
 section
 	margin-top 100px

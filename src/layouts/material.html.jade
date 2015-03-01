@@ -1,19 +1,16 @@
 - var scripts = getBlock('scripts')
 - var styles = getBlock('styles')
 
-- scripts.add(["/vendor/jquery/dist/jquery.min.js"])
-
-- styles.add(["/vendor/normalize.css/normalize.css"])
-- styles.add(["/vendor/fontawesome/css/font-awesome.min.css"])
+- scripts.add(["/vendor/angular/angular.min.js"])
+- scripts.add(["/vendor/angular-animate/angular-animate.min.js"])
+- scripts.add(["/vendor/angular-aria/angular-aria.min.js"])
+- scripts.add(["/vendor/angular-material/angular-material.min.js"])
 
 - scripts.add(["/vendor/log.js","/vendor/modernizr.js"])
 
-//- User
-- styles.add(["/styles/base.css"])
-- styles.add(["/styles/grid.css"])
-- styles.add(["/styles/helpers.css"])
-- styles.add(["/styles/style.css"])
-- scripts.add(["/scripts/script.js"])
+- scripts.add(["/scripts/order.js"])
+
+- styles.add(["/vendor/angular-material/angular-material.css"])
 
 doctype html
 html(lang="en")
@@ -51,29 +48,10 @@ html(lang="en")
 		//if lt IE 9
 			script(async src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 
-		link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400', rel='stylesheet', type='text/css')
-		// Styles
 		!= styles.toHTML()
 
-	body
-		.menu
-			ul
-				li: a(href="/#about") Rólunk
-				li: a(href="/#services") Amit nyújtunk
-				li: a(href="/#portfolio") Portfólió
-				li: a(href="/#prices") Áraink
-				li: a(href="/#contact") Kapcsolat
-
+	body(ng-app='#{document.ngApp}')
 		!= content
-		footer
-			.container
-				.row
-					.col-4
-						h2 Elérhetőségeink
-						p site.data.address1
-						p site.data.address2
-						p Tlf. site.data.phone
-						p: a(href="#") # {site.email}
 
 		// Scripts
 		!= scripts.toHTML()

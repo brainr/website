@@ -1,0 +1,32 @@
+---
+layout: 'material'
+title: 'Brainr Order System'
+changfreq:  'daily'
+priority: 0.8
+ngApp: 'orderPage'
+---
+- var scripts = getBlock('scripts')
+- var styles = getBlock('styles')
+
+
+!= styles.toHTML()
+!= scripts.toHTML()
+
+div(layout='column', layout-fill='', ng-controller='OrderNavCtrl')
+	md-toolbar.md-theme-indigo
+		h1.md-toolbar-tools
+			md-button(ng-click='openNav()', hide-gt-md='') M
+			| Brainr - Rendelési rendszer
+	section(layout='row', flex='')
+		md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left', md-is-locked-open="$media('gt-md')")
+			md-content.md-padding
+				md-button.md-primary(ng-click='closeNav()', hide-gt-md='')
+					| Menü elrejtése
+				p(hide-md='', show-gt-md='')
+					| This sidenav is locked open on your device. To go back to the default behavior,
+					| narrow your display.
+		md-content.md-padding(ng-controller='OrderCtrl', flex='')
+			div(layout='column', layout-fill='', layout-align='center center')
+				p
+					| The left sidenav will &apos;lock open&apos; on a medium (&gt;=960px wide) device.
+				div test
